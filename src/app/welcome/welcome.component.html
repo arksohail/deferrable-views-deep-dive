@@ -46,8 +46,13 @@
 } @placeholder {
   <p>We might have an offer...</p>
 } -->
-@defer (on interaction) {
+<!-- @defer (on interaction) {
   <app-offer-preview />
 } @placeholder {
   <p class="fallback">Click to reveal an offer...</p>
+} -->
+@defer (on interaction; prefetch on hover) {
+  <app-offer-preview />
+} @placeholder {
+  <p class="fallback">Hover to prefetch(Check Network Tab Before/After hover), Click to reveal an offer...</p>
 }
